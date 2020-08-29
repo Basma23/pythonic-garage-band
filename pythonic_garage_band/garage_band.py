@@ -38,7 +38,7 @@ class Band(ABC):
         def to_list(self):
             return self.members
 
-class Musician(Band):
+class Musician():
     def __init__(self, name):
         self.name = name
 
@@ -47,13 +47,6 @@ class Musician(Band):
 
     def __repr__(self):
         return f'Hello all, my name is {self.name}'
-
-
-    musician_type = []
-
-    @classmethod
-    def get_members(self):
-        return self.musician_type
 
 class Guitarist(Musician):
     def __init__(self, name, instrument):
