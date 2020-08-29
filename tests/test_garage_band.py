@@ -1,26 +1,20 @@
 from pythonic_garage_band.garage_band import Band, Musician, Guitarist, Bassist, Drummer
 
-def test_jimmy_is_instance_of_correct_class(jimmy):
-    assert isinstance(jimmy, Guitarist)
 
+def test_one():
+    jwan = Guitarist('Jwan', 'Guitarist')
+    actual = "I'm Jwan, and I play Guitar"
+    expected = jwan.__str__()
+    assert expected == actual
 
-def test_jimmy_is_instance_of_parent_class(jimmy):
-    assert isinstance(jimmy, Musician)
+def test_two():
+    jwan = Guitarist('Jwan', 'Guitarist')
+    actual = "guitar"
+    expected = jwan.get_instrument()
+    assert expected == actual
 
-
-def test_jimmy_name(jimmy):
-    assert jimmy.name == 'Jimmy'
-
-
-def test_jimmy_instrument(jimmy):
-    assert jimmy.instrument == 'guitar'
-
-
-# def test_to_list(test_data):
-#     Band.create_from_data(test_data)
-#     expected = 3
-#     actual = Band.to_list()
-#     assert len(actual) == expected
-
-
-
+def test_three():
+    jwan = Guitarist('Jwan', 'Guitarist')
+    actual = "tun tun ttattatun"
+    expected = jwan.play_solo()
+    assert expected == actual
